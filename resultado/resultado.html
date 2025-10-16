@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="../../img/Keevo.ico">
+    <title>Resultados do Diagnóstico de Sistema e SQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <div class="container">
+        
+        <h1>Parâmetros do Mapeamento</h1>
+        <div class="section-grid">
+
+            <div class="info-group">
+                <label>
+                    <span class="tooltip-info" title="O NFe Express é um sistema emissor de nota fiscal eletrônica, selecione somente se você já utiliza o NFe Express.">Utiliza NFe Express ℹ️</span>
+                </label>
+                <label>
+                    <input name="nfe" type="radio" id="nfeNao" value="Não"> Não
+                </label>
+                <label>
+                    <input name="nfe" type="radio" id="nfeSim" value="Sim"> Sim
+                </label>
+            </div>
+            
+            <div class="info-group">
+                <label>
+                <span class="tooltip-info" title="O Holos é um sistema de hiperautomação, selecione somente se você já utiliza o Holos.">Utiliza Holos/People ℹ️</span>
+                </label>
+                <label><input name="holos" type="radio" id="holosNao" value="Não"> Não</label>
+                <label><input name="holos" type="radio" id="holosSim" value="Sim"> Sim</label>
+            </div>
+
+            <div class="info-group">
+                <label>
+                <span class="tooltip-info" title="Digite aqui a quantidade de usuários simultâneos que acessarão o sistema.">Quantidade de usuários simultâneos ℹ️</span>
+                </label>
+                <input type="number" id="qtdUsuarios" class="info-group" min="1" value="1"> 
+            </div>
+            
+        </div>
+        <br>
+        <br>
+        <button id="processButton">
+            Calcular Requisitos
+        </button>
+        <br>
+        
+        <h2 id="reportTitle" style="display:none;">Relatório de Requisitos (Recomendado vs. Atual)</h2>
+        <div id="recommendationReport">
+            </div>
+
+        <h2>Resultados do Diagnóstico de Sistema</h2>
+        
+        <div id="loadingMessage" class="loading-message">
+            Carregando dados...
+        </div>
+        <div id="resultsContent" style="display: none;">
+
+
+            <h2>Dados do Ambiente</h2>
+            <p>As informações coletadas pelo agente local estão sendo exibidas abaixo:</p>
+            <div class="section-grid">
+            <div class="info-group">
+                <label>Versão do Windows:</label>
+                <span id="windowsVersion"></span>
+            </div>
+            <div class="info-group">
+                <label>Nome do Processador:</label>
+                <span id="processorName"></span>
+            </div>
+            <div class="info-group">
+                <label>Número de Cores/Núcleos:</label>
+                <span id="coreCount"></span>
+            </div>
+            <div class="info-group">
+                <label>RAM Total:</label>
+                <span id="totalRamGB"></span>
+            </div>
+            <div class="info-group">
+                <label>Tipo de Conexão:</label>
+                <span id="connectionType"></span>
+            </div>
+            <div class="info-group">
+                <label>Velocidade de Leitura de Disco:</label>
+                <span id="diskReadSpeedMBps"></span>
+            </div>
+            <div class="info-group">
+                <label>Velocidade de Escrita de Disco:</label>
+                <span id="diskWriteSpeedMBps"></span>
+            </div>
+            <div class="info-group">
+                <label>Tipo de Disco:</label>
+                <span id="diskType"></span>
+            </div>
+            <div class="info-group">
+                <label>Tamanho Total do Disco:</label>
+                <span id="diskTotalGB"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
