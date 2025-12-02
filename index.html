@@ -1,58 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image" href="./img/Keevo.ico">
-    <title>Download Agent Mapeamento</title>
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .btn-download {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-download:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Validador de Requisitos do Sistema - NG</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Download do Agent de Mapeamento</h1>
-        <a class="btn-download" href="https://weuller2001.github.io/Mapeamento/agent/releases/AgentMapeamento.exe" download>
-            📥 Baixar AgentMapeamento.exe
-        </a>
+        <h1>Verificação de Compatibilidade NG</h1>
+        <p>Analisando seu computador para instalação do sistema...</p>
+
+        <div id="resultsArea">
+            <p>Carregando...</p>
+        </div>
+        
+        <button id="btnRetry">Verificar Novamente</button>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
